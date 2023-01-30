@@ -34,7 +34,7 @@ function App() {
       unSubscribeFromAuth.current();
     };
   }, []);
-  console.log(isLoading ? "Loading user..." : currentUser);
+  // console.log(isLoading ? "Loading user..." : currentUser);
 
   return (
     <div>
