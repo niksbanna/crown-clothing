@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { connect } from 'react-redux';
 import CartItem from '../CartItem/CartItem';
 import CustonButton from '../Custom-button/CustonButton';
 import './CartDropdown.scss';
 
 const CartDropdown = ({ cartItems }) => {
+    const memoizedCartItems = useMemo(() => cartItems, [cartItems]);
     return (
         <div className='cart-dropdown'>
             <div className="cart-items">
                 {
-                    cartItems.map((cartItem) => (
+                    memoizedCartItems.map((cartItem) => (
                         <CartItem key={cartItem.id} item={cartItem} />
                     ))
                 }
