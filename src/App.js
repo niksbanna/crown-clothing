@@ -4,9 +4,12 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 
 import Header from './Components/Header/Header';
+
 import Homepage from './Pages/Homepage/Homepage';
 import Shop from './Pages/Shop/Shop';
 import SignInAndSignUpPage from './Pages/Sign-in-and-sign-up-page/SignInAndSignUpPage';
+import Checkout from './Pages/Checkout/Checkout';
+
 import { auth, createUserProfileDocument } from './Firebase/Firebase.utils';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './Redux/User/UserActions';
@@ -44,6 +47,7 @@ class App extends Component {
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/shop' element={<Shop />} />
+          <Route exact path='/checkout' element={<Checkout />} />
           <Route
             exact path='/signin'
             element={
