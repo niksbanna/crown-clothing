@@ -29,7 +29,7 @@ const Checkout = ({ selectCartItems, cartTotal }) => {
                 })
             }
             <div className="total">
-                <span>TOTAL:  &#x20B9;{cartTotal}</span>
+                <span>TOTAL: ${cartTotal}</span>
             </div>
         </div>
     )

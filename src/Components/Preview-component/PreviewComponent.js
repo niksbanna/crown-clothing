@@ -2,7 +2,8 @@ import React from 'react';
 import CollectionItem from '../Collection-item/CollectionItem';
 import './PreviewComponent.scss'
 
-export default function PreviewComponent({ title, items }) {
+export default function PreviewComponent({ collection }) {
+    const { title, items } = collection;
     return (
         <div className='collection-preview'>
             <h1 className="title">{title.toUpperCase()}</h1>

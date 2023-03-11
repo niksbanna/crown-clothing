@@ -46,7 +46,7 @@ class App extends Component {
         <Header />
         <Routes>
           <Route path='/' element={<Homepage />} />
-          <Route path='/shop' element={<Shop />} />
+          <Route path='/shop/*' element={<Shop />} />
           <Route exact path='/checkout' element={<Checkout />} />
           <Route
             exact path='/signin'
