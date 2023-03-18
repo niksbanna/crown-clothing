@@ -5,7 +5,7 @@ import './CollectionsOverview.scss';
 
 const CollectionsOverview = ({ collections }) => {
     const memoCollections = useMemo(() => collections, [collections]);
-    const collection = Object.keys(memoCollections).map(key => memoCollections[key]);
+    const collection = collections ? Object.keys(memoCollections).map(key => memoCollections[key]) : [];
     return (
         <div className='collections-overview'>
             {

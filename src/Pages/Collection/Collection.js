@@ -5,10 +5,9 @@ import CollectionItem from '../../Components/Collection-item/CollectionItem';
 import './Collection.scss';
 
 const CollectionPage = ({ collections }) => {
-    console.log('collections', collections);
     let { categoryId } = useParams();
-    const collection = collections[categoryId];
-    console.log('collection', collection);
+
+    const collection = collections ? collections[categoryId] : null;
     const { title, items } = collection;
     return (
         <div className='collection-page'>
