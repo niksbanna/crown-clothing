@@ -25,12 +25,6 @@ class Shop extends React.Component {
             updateCollections(collectionsMap);
             this.setState({ loading: false });
         });
-
-        // collectionRef.onSnapshot(async snapshot => {
-        //     const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
-        //     updateCollections(collectionsMap);
-        //     this.setState({ loading: false });
-        // })
     }
 
     render() {
